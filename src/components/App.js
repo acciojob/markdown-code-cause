@@ -1,5 +1,5 @@
 import React from "react";
-import Markdown from "./Markdown.js"; // Correct import path
+import Markdown from "./markdown.js"; // Correct import path
 
 const App = () => {
   return (
