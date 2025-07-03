@@ -1,14 +1,32 @@
+// import React from "react";
+// import Markdown from "./markdown.js"; // Correct import path
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Markdown />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+
 import React from "react";
-import Markdown from "./markdown.js"; // Correct import path
 
-const App = () => {
-  return (
-    <div>
-      <Markdown />
-    </div>
-  );
-};
+import Markdown from "./markdown";
 
-export default App;
+const App=()=>{
 
 
+    return(
+
+        <div>
+            <Markdown />
+        </div>
+    )
+}
+
+export default App

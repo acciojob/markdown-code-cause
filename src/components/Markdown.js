@@ -35,6 +35,7 @@
 
 // export default Markdown;
 
+
 import React, { useState, useEffect } from "react";
 
 const Markdown = () => {
@@ -50,14 +51,14 @@ const Markdown = () => {
   return input
     .split("\n")
     .map((line) => {
-      // Convert *bold* to <strong>
-      const boldConverted = line.replace(/\\(.?)\\*/g, "<strong>$1</strong>");
+      // Convert **bold** to <strong>
+      const boldConverted = line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 
       // Convert # Heading to <h1>
       if (boldConverted.startsWith("# ")) {
-        return <h1>${boldConverted.slice(2)}</h1>;
+        return `<h1>${boldConverted.slice(2)}</h1>`;
       } else {
-        return <p>${boldConverted}</p>;
+        return `<p>${boldConverted}</p>`;
       }
     })
     .join("");
